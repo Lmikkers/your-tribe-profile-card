@@ -25,8 +25,8 @@ article {
   max-width: 25em;
   min-width: 20em;
   border-radius: 1rem;
-  background: rgb(0,239,255);
-  background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%);
+  background: #ee497e;
+  /* background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%); */
   box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   transition: .25s;
 }
@@ -41,7 +41,7 @@ header {
 
 h1 {
   margin: 2rem 0 1rem;
-  color: rgba(0,239,255,1);
+  color: #FFF;
 }
 
 button {
@@ -53,23 +53,26 @@ button {
   padding: .25rem;
   border: none;
   border-radius: 50%;
-  background: rgba(0,239,255,1);
+  /* background: rgba(0,239,255,1); */
+  background: #0c0c0c;
   transform: scale(.8);
   transition: .25s;
 }
 button:focus {
   outline: none;
-  background: #202592;
+  /* background: #202592; */
+  background: #faa7bf;
 }
 button:focus svg {
-  stroke: rgba(0,239,255,1);
+  /* stroke: rgba(0,239,255,1); */
+  stroke: #0c0c0c;
 }
 
 svg {
   position: absolute;
   top: calc(1.25rem - 12px);
   left: calc(1.25rem - 12px);
-  stroke: #4e54c8;
+  stroke: #ee497e;
   transition-delay: .25s;
 }
 button svg:nth-of-type(2) {
@@ -102,13 +105,13 @@ dl {
   margin-bottom: 0;
   padding: 5rem 0 3rem;
   text-align: center;
-  background: rgb(255,255,255);
+  /* background: rgb(255,255,255); */
 }
 
 dt {
   margin-top: .25rem;
   padding-top: .25rem;
-  border-top: 1px solid rgba(0,0,0,0.3);
+  /* border-top: 1px solid rgba(0,0,0,0.3); */
   font-weight: bold;
 }
 dt:nth-of-type(1) {
