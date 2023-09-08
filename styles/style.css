@@ -11,8 +11,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: open sans;
-  color: #10214e;
+  font-family: 'Roboto', sans-serif;
+  /* color: #10214e; */
+  color: #f2eeee;
 }
 
 article {
@@ -25,7 +26,7 @@ article {
   max-width: 25em;
   min-width: 20em;
   border-radius: 1rem;
-  background: #ee497e;
+  background: #302e2e;
   /* background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%); */
   box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   transition: .25s;
@@ -41,7 +42,10 @@ header {
 
 h1 {
   margin: 2rem 0 1rem;
-  color: #FFF;
+  color: #7ff0ff;
+  font-family: 'Expletus Sans', cursive;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 button {
@@ -54,14 +58,17 @@ button {
   border: none;
   border-radius: 50%;
   /* background: rgba(0,239,255,1); */
-  background: #0c0c0c;
+  background: rgb(255 255 255 / 43%);
   transform: scale(.8);
   transition: .25s;
+}
+button:hover{
+  cursor: pointer;
 }
 button:focus {
   outline: none;
   /* background: #202592; */
-  background: #faa7bf;
+  background: rgb(255 255 255 / 43%);
 }
 button:focus svg {
   /* stroke: rgba(0,239,255,1); */
@@ -72,7 +79,7 @@ svg {
   position: absolute;
   top: calc(1.25rem - 12px);
   left: calc(1.25rem - 12px);
-  stroke: #ee497e;
+  stroke: #302e2e;
   transition-delay: .25s;
 }
 button svg:nth-of-type(2) {
@@ -136,6 +143,7 @@ dd:nth-of-type(2){
 
 p { 
   margin: 0;
+  color: #f2eeee;
 }
 
 article > p {
@@ -144,8 +152,16 @@ article > p {
   padding: 3rem 2rem;
   border-radius: 0 0 1rem 1rem;
   text-align: center;
-  background: rgba(255,255,255, 0.5);
+  background: rgb(255 255 255 / 78%);
+  color: #302e2e;
+  /* background: rgba(255,255,255, 0.5); */
 }
+
+p.bottomText {
+  /* color: #e4e4e433; */
+  text-transform: lowercase;
+}
+
 
 /* expand content */
 body.expand {
