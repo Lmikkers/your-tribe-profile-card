@@ -1,95 +1,63 @@
 <!DOCTYPE html>
-<html lang="nl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FDND Visitekaartje</title>
-    <link rel="stylesheet" href="styles/style.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FDND Visitekaartje</title>
+  <link rel="stylesheet" href="./styles/style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- LINKJES NAAR GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
-    
-    <article>
-      
-      <header>
-        
-        <h1>Test</h1>
-        <p class="bottomText">Student</p>
-        
-        <p>Ad Frontend Development & Design</p>
-        
-        <button>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <title>Wijzig layout</title>
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-        </button>
-        
-      </header>
+  <!-- FONT AWESOME LINK -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
   
-      <!-- <img src="assets/creative-coder.png" alt="" width="800" height="800"> -->
-      <img src="assets/image-me.jpeg"> 
-      <div class="roundImage"></div>
+  <main class="flexCenter">
+    <div class="cards flexCenter" id="card">
 
-      <dl>
-        <dt>HTML</dt>
-        <dd>⭐⭐⭐</dd>
-        
-        <dt>CSS</dt>
-        <dd>⭐⭐⭐</dd>
-        
-        <dt>JavaScript</dt>
-        <dd>⭐</dd>
-      </dl>
-  
-      <!-- <p>Het WEB is te gek! <br> Met HTML, CSS en JavaScript kan ik vette, interactieve web apps maken.</p> -->
-      <p><a>Instagram</a> <br> </p>
-      
-    </article>
-
-
-
-    <!-- NIEUW VISITE KAARTJE -->
-
-    <!-- <article>
-      <img src="./assets/image-me.jpeg" alt="">
-
-      <header>
-        <h1>Naam</h1>
-        <p>Tekst over mij wie ben ik blabalbalbalbalba</p> -->
-        
-        <!-- button naar meer met een id zodat je meer kunt zien -->
-        <!-- <a href="">Meer</a> -->
-
-        <!-- Linkjes van socialmedia in een ul li a -->
-        <!-- <ul>
-          <li><a href="#">Tekst</a></li>
-          <li><a href="#">Tekst</a></li>
-          <li><a href="#">Tekst</a></li>
-        </ul>
-      </header>
-    </article> -->
-
-    <!-- EINDE NIEUW VISITE KAARTJE -->
-
-
-
-    <script src="scripts/script.js"></script>
+      <article class="cards cardFront">
+        <p>Front</p>
+        <!-- VOORKANT VISITEKAARTJE -->
+          <section class="blokCenter"> 
+            <h1>Larissa</h1>
+            <h2>Mikkers</h2>
+          </section>
     
-  </body>
+          <button onclick="turn()" id="flip" class="btn toggle">Meer <i class="fa-solid fa-angle-right"></i></button>
+    
+          <ul class="socials">
+            <li><a href="https://www.instagram.com/larissamikkers/" target="_blank" class="fa-brands fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/larissa-mikkers-44320817b/" target="_blank" class="fa-brands fa-linkedin-in"></a></li>
+            <li><a href="mailto:larissa.mikkers@hotmail.com" target="_blank" class="fa-regular fa-envelope"></a></li>
+          </ul>
+    
+      </article>
+    
+      <article class="cards cardBack">
+        <p>Back</p>
+        <!-- <a href="#back" class="backBtn"><i class="fa-solid fa-rotate-left"></i></a> -->
+        <button class="backBtn" onclick="turn()"><i class="fa-solid fa-rotate-left"></i></button>
+    
+        <h3>Wie ben ik?</h3>
+        <p>Hier komt meer informatie over mij te staan</p>
+  
+        <!-- <button onclick="turn()" class="btn toggle">Back <i class="fa-solid fa-angle-right"></i></button> -->
+        <img src="./assets/image-me.jpeg" alt="">
+      </article>
+    </div>
+
+    
+  </main>
+
+  <footer class="flexCenter">
+    <p>©copyright 2023 Larissa Mikkers</p>
+  </footer>
+
+  <script src="./scripts/script.js"></script>
+  <script src="https://kit.fontawesome.com/d78427f615.js" crossorigin="anonymous"></script>
+</body>
 </html>
