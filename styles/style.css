@@ -169,8 +169,8 @@ img {
 .cards:hover {
   /* animation: bounce .75s ease-in-out; */
 }
-/* ANIMATIE BOUNCE */
 
+/* ANIMATIE BOUNCE */
 @keyframes bounce {
   0%, 100% {transform: translateY(0);}
   50% {transform: translateY(-.25rem);} /* - is omhoog */
@@ -184,8 +184,32 @@ img {
 }
 /* EINE ANIMATIE BOUNCE */
 
+
+/* --- ANIMATIE FLOAT --- */
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+/* --- EINDE ANIMATIE FLOAT --- */
+
+
+
 main {
   perspective: 1000px;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
 }
 
 .cards {
