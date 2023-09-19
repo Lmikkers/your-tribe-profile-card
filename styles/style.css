@@ -156,8 +156,8 @@ img {
     height: 12rem;
     border-radius: 50%;
     border: white 0.4rem solid;
-    top: -2rem;
-    left: -2rem;
+    top: -3rem;
+    left: -3rem;
     /* hierdoor sized de img goed */
     object-fit: cover;
 }
@@ -240,10 +240,29 @@ main {
   transition: .75s ease-in-out;
   /* wanneer je flipt staat de tekst goed */
   transform: rotateY(180deg);
+  padding: 2em 4em;
 }
 .showCard .cardBack{
   display: flex;
   transition: .75s ease-in-out;
+}
+
+.cardBack h3 {
+  margin-bottom: 1.6em;
+  font-size: 1.8em;
+}
+.cardBack p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+} 
+
+.cardBack p span {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.cardBack p span::before {
+  content: '👋 ';
 }
 
 /* --- FOOTER --- */
