@@ -177,9 +177,7 @@ img {
 .cards{
   transition: .75s ease-in-out;
 }
-.cards:hover {
-  /* animation: bounce .75s ease-in-out; */
-}
+
 
 
 
@@ -273,13 +271,6 @@ main {
 
 .cards.turned {
   transform: rotateY(180deg);
-}
-
-.turned .cardFront {
-  /* display: none; */
-}
-.turned .cardBack {
-  /* display: flex; */
 }
 
 .cardFront,
