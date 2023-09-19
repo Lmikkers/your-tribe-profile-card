@@ -28,7 +28,7 @@ main {
 article {
   width: 50vw;
   max-width: 40em;
-  min-width: 25em;
+  min-width: 35em;
   min-height: 24em;
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ h1.typewriter {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   animation: 
-    typing 3.5s steps(30, end),
+    typing 2.25s steps(30, end),
     blink-caret .5s step-end infinite;
 }
 
@@ -238,6 +238,17 @@ img {
   50% { border-color: orange }
 }
 
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+100% { transform: rotate( 0.0deg) }
+}
+
 /* EINDE ANIMATIE TYPEWRITER */
 
 
@@ -306,6 +317,12 @@ main {
 
 .cardBack p span::before {
   content: '👋 ';
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+  margin-right: 8px;
 }
 
 /* --- FOOTER --- */
@@ -317,4 +334,27 @@ footer{
   background: #1e1d1d;
   text-align: center;
   color: rgba(158, 158, 158, 0.603);
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  article {
+    min-width: 30em;
+  }
+
+  .cardBack{
+    padding: 2em;
+  }
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    top: -2rem;
+    left: -1rem;
+  }
 }
