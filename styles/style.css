@@ -334,18 +334,44 @@ footer{
 
 @media (max-width: 767px) {
 
+  main {
+    overflow: hidden;
+  }
+
   article {
-    min-width: 30em;
+    min-width: 80vw;
+    min-height: 60vh;
+  }
+
+  h1.typewriter {
+    font-size: 2em;
+  }
+
+  article .btn {
+    bottom: 0;
+    width: 80vw;
+    border-radius: 0 0em 1em 1em;
+    font-size: 1.2em;
   }
 
   .cardBack{
     padding: 2em;
   }
 
-  img {
-    width: 10rem;
-    height: 10rem;
-    top: -2rem;
-    left: -1rem;
+  .cardBack h3 {
+    font-size: 1.4em;
   }
+
+  .cardBack p span {
+    font-size: 1.2em;
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    top: -4rem;
+    left: -2rem;
+  }
+  
+
 }
